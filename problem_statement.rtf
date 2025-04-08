@@ -1,0 +1,185 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 .SFNS-Regular_wdth_opsz300000_GRAD_wght2580000;\f1\fnil\fcharset0 HelveticaNeue;\f2\fswiss\fcharset0 Helvetica;
+\f3\froman\fcharset0 Times-Roman;\f4\fswiss\fcharset0 ArialMT;\f5\froman\fcharset0 Times-Bold;
+\f6\fnil\fcharset0 .SFNS-Regular_wdth_opsz120000_GRAD_wght2580000;\f7\fnil\fcharset0 .SFNS-Regular_wdth_opsz110000_GRAD_wght2580000;}
+{\colortbl;\red255\green255\blue255;\red10\green22\blue51;\red241\green242\blue245;\red53\green64\blue89;
+\red249\green250\blue251;\red63\green114\blue250;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c3529\c11765\c25882;\cssrgb\c95686\c96078\c96863;\cssrgb\c27059\c32157\c42353;
+\cssrgb\c98039\c98431\c98824;\cssrgb\c30980\c54118\c98431;\cssrgb\c100000\c100000\c100000;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid101\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww34360\viewh21040\viewkind0
+\deftab720
+\pard\pardeftab720\sa300\partightenfactor0
+
+\f0\b\fs96 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Problem Statement\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0\fs30\fsmilli15120 \AppleTypeServices \cf2 \cb1 \
+\pard\pardeftab720\sa200\partightenfactor0
+
+\f2\fs52 \cf4 \cb3 \strokec4 Case Study: Automatic Ticket Classification\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs36 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 Welcome to this case study on \'91Automatic Ticket Classification\'92. Let\'92s start the segment by understanding the problem statement from Alankar and getting an idea of the case study.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs24 \cf5 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs30\fsmilli15120 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs36 \cf2 \cb3 In this case study, you will
+\f5\b \'a0create a model that can automatically classify customer complaints based on the products and services that the ticket mentions.
+\f3\b0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs30\fsmilli15120 \cf2 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs36 \cf2 \cb3 \'a0\cb1 \
+\pard\pardeftab720\sa200\partightenfactor0
+
+\f2\fs52 \cf4 \cb3 \strokec4 Problem statement\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs36 \cf2 \cb3 \strokec2 For a financial company, customer complaints carry a lot of importance, as they are often an indicator of the shortcomings in their products and services. If these complaints are resolved efficiently in time, they can bring down customer dissatisfaction to a minimum and retain them with stronger loyalty. This also gives them an idea of how to continuously improve their services to attract more customers.\'a0\cb1 \
+\cb3 \'a0\cb1 \
+\cb3 These customer complaints are unstructured text data; so, traditionally, companies need to allocate the task of evaluating and assigning each ticket to the relevant department to multiple support employees. This becomes tedious as the company grows and has a large customer base.\cb1 \
+\cb3 \'a0\cb1 \
+\cb3 In this case study, you will be working as an NLP engineer for a financial company that wants to automate its customer support tickets system. As a financial company, the firm has many products and services such as credit cards, banking and mortgages/loans.\'a0\cb1 \
+\cb3 \'a0\cb1 \
+\
+\pard\pardeftab720\sa200\partightenfactor0
+
+\f2\fs52 \cf4 \cb3 \strokec4 Business goal\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs36 \cf2 \cb3 \strokec2 You need to build a model that is able to classify customer complaints based on the products/services. By doing so, you can segregate these tickets into their relevant categories and, therefore, help in the quick resolution of the issue.\cb1 \
+\cb3 \'a0\cb1 \
+\cb3 With the help of non-negative matrix factorization (NMF), an approach under topic modelling, you will detect patterns and recurring words present in each ticket. This can be then used to understand the important features for each cluster of categories. By segregating the clusters, you will be able to identify the topics of the customer complaints.\'a0\cb1 \
+\cb3 \'a0\cb1 \
+\cb3 You will be doing topic modelling on the .json data provided by the company. Since this data is not labelled, you need to apply NMF to analyse patterns and classify tickets into the following five clusters based on their products/services:\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Credit card / Prepaid card
+\fs32 \cb1 \
+\ls1\ilvl0
+\fs36 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Bank account services
+\fs32 \cb1 \
+\ls1\ilvl0
+\fs36 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Theft/Dispute reporting
+\fs32 \cb1 \
+\ls1\ilvl0
+\fs36 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Mortgages/loans
+\fs32 \cb1 \
+\ls1\ilvl0
+\fs36 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Others\'a0
+\fs32 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs36 \cf2 \cb3 With the help of topic modelling, you will be able to map each ticket onto its respective department/category. You can then use this data to train any supervised model such as logistic regression, decision tree or random forest. Using this trained model, you can classify any new customer complaint support ticket into its relevant department.\cb1 \
+\cb3 \'a0\cb1 \
+\
+\pard\pardeftab720\sa200\partightenfactor0
+
+\f2\fs52 \cf4 \cb3 \strokec4 Dataset\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs36 \cf2 \cb3 \strokec2 Let\'92s first\'a0{\field{\*\fldinst{HYPERLINK "https://drive.google.com/file/d/1Y4Yzh1uTLIBLnJq1_QvoosFx9giiR1_K/view?usp=sharing"}}{\fldrslt \cf6 \strokec6 download\'a0}}the data set.\cb1 \
+\cb3 \'a0\cb1 \
+\cb3 The data set given to you is in the .json format and contains 78,313 customer complaints with 22 features. You need to convert this to a dataframe in order to process the given complaints.\cb1 \
+\cb3 \'a0\cb1 \
+\cb3 \'a0\cb1 \
+\pard\pardeftab720\sa200\partightenfactor0
+
+\f2\fs52 \cf4 \cb3 \strokec4 Starter code\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs36 \cf2 \cb3 \strokec2 You can download the starter code\'a0{\field{\*\fldinst{HYPERLINK "https://drive.google.com/file/d/1O1AO9AI6Y70e2iqTeD8Ma-hOX6IgQ8V4/view?usp=sharing"}}{\fldrslt \cf6 \strokec6 here}}\'a0or from below:\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f6\b \cf2 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb7 Automatic_Ticket_Classification_Assignment\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f7\fs32 \cf6 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb7 Download\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0\fs30\fsmilli15120 \cf2 \strokec2 \
+\pard\pardeftab720\sa200\partightenfactor0
+
+\f2\fs52 \cf4 \cb3 \strokec4 Expected tasks\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs36 \cf2 \cb3 \strokec2 You need to perform the following eight major tasks to complete the assignment:\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Data loading
+\fs32 \cb1 \
+\ls2\ilvl0
+\fs36 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Text preprocessing
+\fs32 \cb1 \
+\ls2\ilvl0
+\fs36 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Exploratory data analysis (EDA)
+\fs32 \cb1 \
+\ls2\ilvl0
+\fs36 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Feature extraction
+\fs32 \cb1 \
+\ls2\ilvl0
+\fs36 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	5	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Topic modelling\'a0
+\fs32 \cb1 \
+\ls2\ilvl0
+\fs36 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	6	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Model building using supervised learning
+\fs32 \cb1 \
+\ls2\ilvl0
+\fs36 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	7	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Model training and evaluation
+\fs32 \cb1 \
+\ls2\ilvl0
+\fs36 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	8	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Model inference
+\fs32 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs36 \cf2 \cb3 \'a0\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f5\b \cf2 \cb3 Note:
+\f3\b0 \'a0Once you have finalised the clusters/categories for customer complaints, the next step is to create a data set that contains the complaints and labels (which you found using NMF). This labelled data set will be used for model building using supervised learning.\'a0\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 You need to try at least any three models from logistic regression, naive Bayes, decision tree and random forest.\'a0\cb1 \
+\cb3 You need to select the model that performs the best according to the evaluation metrics.\cb1 \
+\cb3 \'a0\cb1 \
+\pard\pardeftab720\sa200\partightenfactor0
+
+\f2\fs52 \cf4 \cb3 \strokec4 People you will hear from in this session\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f5\b\fs36 \cf2 \cb3 \strokec2 Subject Matter Expert
+\f3\b0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.linkedin.com/in/alankar-gupta-898a9659/"}}{\fldrslt \cf6 \cb3 \strokec6 Alankar Gupta}}\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 Assistant Manager, Ernst & Young\cb1 \
+\cb3 Alankar Gupta is an Assistant Manager at EY, where his primary responsibilities are leveraging\'a0machine learning to solve a range of business problems in domains like private equity, financial services, mobility, etc. He is also proficient at developing and productionizing\'a0large-scale models/algorithms.\cb1 \
+\cb3 \'a0\cb1 \
+\cb3 The evaluation rubrics for\'a0the case study are given on the next page.\cb1 \
+}
